@@ -20,7 +20,7 @@ set "build_type=%1"
 set "target=%2"
 
 :set_build_dir
-set "ws_root=C:\Users\harip\STM32CubeIDE\workspace_1.10.1\LED"
+set "ws_root=C:\Users\harip\STM32CubeIDE\workspace_1.10.1\Ultrasonic"
 set "build_dir=%ws_root%\%build_type%"
 
-"%ws_root%\ci-cd-tools\build.bat" "%build_dir%" %build_type% %target%
+"%ws_root%\ci-cd-tool\build.bat" "%build_dir%" %build_type% %target%
