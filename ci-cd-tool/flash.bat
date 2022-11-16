@@ -13,7 +13,7 @@ exit /b 1
 
 set "sn=%1"
 set "image_file=%2"
-set "flash_tool=C:\Program Files (x86)\STMicroelectronics\stlink_server\stlinkserver"
+set "flash_tool=C:\Program Files (x86)\STMicroelectronics\stlink_server"
 set "flash_start_addr=0x08000000"
 
 "%flash_tool%" --connect port=SWD sn=%sn% --download "%image_file%" %flash_start_addr% -hardRst
