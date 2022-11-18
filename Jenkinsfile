@@ -11,6 +11,14 @@ pipeline {
                 bat "${TOOL_DIR}\\build.bat ${WORKSPACE}\\Debug Debug all"
             }
         }
+        
+     stage('Static Code Analysis') {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    bat "${TOOL_DIR}\\static-analysis.bat ${WORKSPACE}\\Core"
+                }
+            }
+        }    
      
     stage('Flash-Debug') { 
             steps {
