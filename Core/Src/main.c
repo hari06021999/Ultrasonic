@@ -360,7 +360,7 @@ void StartTask01(void const * argument)
 
 	  		//*** START Ultrasonic measure routine ***//
 	  		//1. Output 10 usec TRIG
-	  		HAL_GPIO_WritePin(Trigg_GPIO_Port, Trigg_Pin, GPIO_PIN_SET);
+	  		//HAL_GPIO_WritePin(Trigg_GPIO_Port, Trigg_Pin, GPIO_PIN_SET);
 	  		//usDelay(10);
 	  		HAL_GPIO_WritePin(Trigg_GPIO_Port, Trigg_Pin, GPIO_PIN_RESET);
 
